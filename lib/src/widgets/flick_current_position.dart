@@ -1,17 +1,18 @@
-import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../../flick_video_player.dart';
 
 /// Returns a text widget with current position of the video.
 class FlickCurrentPosition extends StatelessWidget {
   const FlickCurrentPosition({
     Key key,
     this.fontSize,
-    this.color,
+    this.colorr,
   }) : super(key: key);
 
   final double fontSize;
-  final Color color;
+  final Color colorr;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class FlickCurrentPosition extends StatelessWidget {
     return Text(
       textPosition,
       style: TextStyle(
-        color: color,
+        color: colorr,
         fontSize: fontSize,
       ),
     );
